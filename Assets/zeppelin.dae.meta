@@ -1,0 +1,144 @@
+fileFormatVersion: 2
+guid: 28e7aa139861e324cb68b20679e98fc2
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: group_0
+    100002: group_1
+    100004: Group_10
+    100006: Group_10 1
+    100008: Group_10 2
+    100010: group_2
+    100012: group_3
+    100014: group_4
+    100016: group_5
+    100018: group_6
+    100020: ID30
+    100022: ID36
+    100024: ID42
+    100026: ID54
+    100028: ID62
+    100030: instance_0
+    100032: instance_1
+    100034: instance_2
+    100036: instance_3
+    100038: Simple_sphere_01
+    100040: //RootNode
+    400000: group_0
+    400002: group_1
+    400004: Group_10
+    400006: Group_10 1
+    400008: Group_10 2
+    400010: group_2
+    400012: group_3
+    400014: group_4
+    400016: group_5
+    400018: group_6
+    400020: ID30
+    400022: ID36
+    400024: ID42
+    400026: ID54
+    400028: ID62
+    400030: instance_0
+    400032: instance_1
+    400034: instance_2
+    400036: instance_3
+    400038: Simple_sphere_01
+    400040: //RootNode
+    2300000: Group_10
+    2300002: Group_10 1
+    2300004: Group_10 2
+    2300006: group_2
+    2300008: group_3
+    2300010: group_5
+    2300012: group_6
+    2300014: ID30
+    2300016: ID54
+    2300018: ID62
+    2300020: Simple_sphere_01
+    3300000: Group_10
+    3300002: Group_10 1
+    3300004: Group_10 2
+    3300006: group_2
+    3300008: group_3
+    3300010: group_5
+    3300012: group_6
+    3300014: ID30
+    3300016: ID54
+    3300018: ID62
+    3300020: Simple_sphere_01
+    4300000: group_2
+    4300002: group_3
+    4300004: group_5
+    4300006: ID30
+    4300008: Simple_sphere_01
+    4300010: ID54
+    4300012: ID62
+    4300014: group_6
+    4300016: Group_10
+    6400000: Group_10
+    6400002: Group_10 1
+    6400004: Group_10 2
+    6400006: group_2
+    6400008: group_3
+    6400010: group_5
+    6400012: group_6
+    6400014: ID30
+    6400016: ID54
+    6400018: ID62
+    6400020: Simple_sphere_01
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 92
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 1
+  userData: 
