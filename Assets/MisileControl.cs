@@ -14,19 +14,25 @@ public class MisileControl : MonoBehaviour {
 	void OnCollisionEnter(Collision col)
 	{
 		
-		if (col.gameObject.name.IndexOf("Battleship") > -1 || col.gameObject.name.IndexOf("zeppelin2") > -1) 
+		if (col.gameObject.name.IndexOf("zeppelin2") > -1) 
 		{			
 			//col.gameObject.SendMessageUpwards("OnExplode");
-			Debug.Log ("Hit object: "+col.gameObject.name);
+			Debug.Log ("Hit object: " + col.gameObject.name);
+			plane.SendMessage("AddPoints",50);
+		} else
+		if (col.gameObject.name.IndexOf("Battleship") > -1)
+		{
+			Debug.Log ("Hit object: " + col.gameObject.name);
 			plane.SendMessage("AddPoints",100);
-			
 		} else
 		if (col.gameObject.name.IndexOf ("Bridge") > -1)
 		{
+			Debug.Log ("Hit object: " + col.gameObject.name);
 			plane.SendMessage("AddPoints",10);
 		} else
 		if (col.gameObject.name.IndexOf ("tank") > -1)
 		{
+			Debug.Log ("Hit object: " + col.gameObject.name);
 			plane.SendMessage("AddPoints",200);
 		}
 		Destroy(this.gameObject);
