@@ -59,7 +59,7 @@ public class UpdateTerrainHeight : MonoBehaviour
             //Add zeppelin
             Transform zeppelinObjectFromPool = pulaZeppelin.getObject();
             zeppelinObjectFromPool.transform.position = new Vector3(UnityEngine.Random.Range(900, 1100), UnityEngine.Random.Range(30, 70), cameraZPosition);
-            zeppelinObjectFromPool.Rotate(new Vector3(270.0f, 90.0f, 0.0f));
+            zeppelinObjectFromPool.Rotate(new Vector3(-90.0f, 0f, 270.0f));
             onScene.Enqueue(zeppelinObjectFromPool);
 
         }
