@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/fly.unity
+- path: Assets/_Scenes/startMenu.unity
   isLoaded: 1
   isActive: 1

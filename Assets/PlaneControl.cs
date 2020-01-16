@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
+using UnityEngine.SceneManagement;
 
 public class PlaneControl : MonoBehaviour
 {
@@ -105,13 +106,7 @@ public class PlaneControl : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("You died: " + collision.gameObject.name);
-        if (collision.gameObject.name.IndexOf("zeppelin2") > -1)
-        {
-            this.GetComponent<Renderer>().enabled = false;
-            Debug.Log("Hit object: " + collision.gameObject.name);
-        }
-        Destroy(this.gameObject);
+        SceneManager.LoadScene("gameOver");
     }
 
     void OnGUI()

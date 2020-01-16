@@ -32,7 +32,8 @@ public class ZeppelinControl : UpdateShipPosition {
 				transform.position = new Vector3(1600, transform.position.y, transform.position.z);
 			}
 		}
-		else if(hitcount == 0 && transform.position != Vector3.zero)
+		//If 3 shots - remove zeppelin from scene and put in Pool
+		else if (hitcount <= 0 && transform.position != Vector3.zero)
 		{
 			UpdateTerrainHeight.pulaZeppelin.putObject(transform);
 			hitcount = 3;

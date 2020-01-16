@@ -24,14 +24,13 @@ public class UpdateShipPosition : MonoBehaviour
             hitcount--;
             Transform exp = Instantiate(explosion1, collision.contacts[0].point, Quaternion.identity) as Transform;
             Transform smo = Instantiate(smoke, collision.contacts[0].point, Quaternion.identity) as Transform;
-            //exp.parent = this.gameObject.transform;
-            //smo.parent = this.gameObject.transform;
         }
     }
 
     // Update is called once per frame
     void Update()
     {
+        //If 3 shots - remove ship from scene and put in Pool
         if (hitcount <= 0 && transform.position != Vector3.zero)
         {
             UpdateTerrainHeight.pulaZeppelin.putObject(transform);

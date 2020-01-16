@@ -41,9 +41,7 @@ public class UpdateTerrainHeight : MonoBehaviour
         bridge = GameObject.Find("Bridge");
 
         editTerrain(TerrainC);
-        //AddShips(TerrainC);
         editTerrain(TerrainN);
-        //AddShips(TerrainN);
     }
 
 
@@ -247,10 +245,5 @@ public class UpdateTerrainHeight : MonoBehaviour
 
         //Smooth(heights);
         myTerrain.terrainData.SetHeights(0, 0, heights);
-    }
-
-    public Pool getZeppelinPool() 
-    {
-        return pulaZeppelin;
     }
 }
