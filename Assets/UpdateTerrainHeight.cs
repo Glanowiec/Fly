@@ -52,6 +52,7 @@ public class UpdateTerrainHeight : MonoBehaviour
 
     void AddShip()
     {
+        //l - this variable is random and by this value we provide object from pools.
         int l = UnityEngine.Random.Range(1, 10);
         float cameraZPosition = camera.transform.position.z + 1100;
         if (l <= 3)
@@ -147,19 +148,18 @@ public class UpdateTerrainHeight : MonoBehaviour
 
             }
 
-            // check if object must be returned to pool
-            // remove object to pool
+            // Check object onScene
             if (onScene.Count > 0)
             {
-                Transform o = (Transform)onScene.Peek();
+                Transform obj = (Transform)onScene.Peek();
 
-                if (o != null)
+                if (obj != null)
                 {
-                    if (camera.transform.position.z > o.transform.position.z)
+                    if (camera.transform.position.z > obj.transform.position.z)
                     {
-                        if (o.name.IndexOf("zeppelin") > -1)
+                        if (obj.name.IndexOf("zeppelin") > -1)
                             pulaZeppelin.putObject((Transform)onScene.Dequeue());
-                        if (o.name.IndexOf("Battleship") > -1)
+                        if (obj.name.IndexOf("Battleship") > -1)
                             pulaShip.putObject((Transform)onScene.Dequeue());
                     }
                 }
@@ -247,5 +247,10 @@ public class UpdateTerrainHeight : MonoBehaviour
 
         //Smooth(heights);
         myTerrain.terrainData.SetHeights(0, 0, heights);
+    }
+
+    public Pool getZeppelinPool() 
+    {
+        return pulaZeppelin;
     }
 }

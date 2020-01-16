@@ -3,7 +3,7 @@
 public class ZeppelinControl : UpdateShipPosition {
 
 	private Vector3 startPosition;
-	private int speed = 50;
+	private int speed = 40;
 
 	// Use this for initialization
 	public void resetHit() {
@@ -19,15 +19,23 @@ public class ZeppelinControl : UpdateShipPosition {
 	//Here we are checking if zeppelin is out of our sight (Axis Y). If not - it will flight again from right.
 	//INFO: it can be checked by change speed.
 	void Update () {
-	
-		if (transform.position != Vector3.zero && transform.position.x > 100)
+
+		if (hitcount > 0)
 		{
-			//deltaTime - time diff between frames. Control speed of zeppelin
-			transform.Translate(Vector3.up * Time.deltaTime * speed * -1);
+			if (transform.position != Vector3.zero && transform.position.x > 100)
+			{
+				//deltaTime - time diff between frames. Control speed of zeppelin
+				transform.Translate(Vector3.up * Time.deltaTime * speed * -1);
+			}
+			else if (transform.position != Vector3.zero && transform.position.x < 100)
+			{
+				transform.position = new Vector3(1600, transform.position.y, transform.position.z);
+			}
 		}
-		else if (transform.position != Vector3.zero && transform.position.x < 100)
+		else if(hitcount == 0 && transform.position != Vector3.zero)
 		{
-			transform.position = new Vector3(1600, transform.position.y, transform.position.z);
+			UpdateTerrainHeight.pulaZeppelin.putObject(transform);
+			hitcount = 3;
 		}
 	}
 

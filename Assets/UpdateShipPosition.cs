@@ -4,7 +4,6 @@ using System.Collections;
 public class UpdateShipPosition : MonoBehaviour
 {
 
-
     // explosion particle
     public Transform explosion1;
     public Transform smoke;
@@ -33,6 +32,10 @@ public class UpdateShipPosition : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (hitcount <= 0 && transform.position != Vector3.zero)
+        {
+            UpdateTerrainHeight.pulaZeppelin.putObject(transform);
+            hitcount = 3;
+        }
     }
 }

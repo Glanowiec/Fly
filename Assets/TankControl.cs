@@ -20,7 +20,7 @@ public class TankControl : UpdateShipPosition
     // Update is called once per frame
     void Update()
     {
-        if (hitcount == 3)
+        if (hitcount > 0)
         {
             GetComponent<Rigidbody>().velocity = new Vector3(30, 0, 0);
         }
