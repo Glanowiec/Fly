@@ -104,6 +104,8 @@ public class PlaneControl : MonoBehaviour
         Debug.Log("You died: " + other.name);
     }
 
+
+    //ex5
     void OnCollisionEnter(Collision collision)
     {
         SceneManager.LoadScene("gameOver");

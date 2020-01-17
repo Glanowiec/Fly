@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
+
+    //ex5
     public void StartGame()
     {
         SceneManager.LoadScene("fly");

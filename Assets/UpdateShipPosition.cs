@@ -30,10 +30,11 @@ public class UpdateShipPosition : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //ex4
         //If 3 shots - remove ship from scene and put in Pool
         if (hitcount <= 0 && transform.position != Vector3.zero)
         {
-            UpdateTerrainHeight.pulaZeppelin.putObject(transform);
+            UpdateTerrainHeight.pulaShip.putObject(transform);
             hitcount = 3;
         }
     }

@@ -5,11 +5,11 @@ public class ZeppelinControl : UpdateShipPosition {
 	private Vector3 startPosition;
 	private int speed = 40;
 
-	// Use this for initialization
 	public void resetHit() {
 		hitcount = 3;
 	}
-	
+
+	// Use this for initialization
 	void Start () {
 		resetHit ();
 	}
@@ -24,6 +24,7 @@ public class ZeppelinControl : UpdateShipPosition {
 		{
 			if (transform.position != Vector3.zero && transform.position.x > 100)
 			{
+				//ex3
 				//deltaTime - time diff between frames. Control speed of zeppelin
 				transform.Translate(Vector3.up * Time.deltaTime * speed * -1);
 			}
@@ -32,6 +33,7 @@ public class ZeppelinControl : UpdateShipPosition {
 				transform.position = new Vector3(1600, transform.position.y, transform.position.z);
 			}
 		}
+		//ex4
 		//If 3 shots - remove zeppelin from scene and put in Pool
 		else if (hitcount <= 0 && transform.position != Vector3.zero)
 		{
